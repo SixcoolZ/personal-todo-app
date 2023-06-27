@@ -1,0 +1,12 @@
+div{
+    border: solid;
+    display: flex;
+    font-size: 1.4rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 1rem 0;
+    width: 50%;
+}
+
+.done{
+    text-decoration: line-through;
+}
