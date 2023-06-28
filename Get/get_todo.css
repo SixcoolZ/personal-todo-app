@@ -21,21 +21,53 @@ body{
 }
 .btn-add:hover{
     cursor: pointer;
-    background-color: brown;
+    background-color: brown ;
 }
 a{
     text-decoration: none;
     color: white;
 }
 
-div{
+/* div{
     display: flex;
     font-size: 1.4rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 1rem 0;
-    width: 50%;
-}
+   
+} */
 
 .done{
     text-decoration: line-through;
+}
+
+.get-todo-container{
+    background:rgba(222, 184, 135, 0.849);
+    width: 90%;
+    max-width: 450px;
+    margin: 1rem auto 1.5rem;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.del_btn{
+    height: 35px;
+    width: 100px;
+    padding: 10px;
+    border-radius: 8px;
+    outline: 0;
+    border: none;
+    background-color: firebrick;
+    color: bisque;
+    cursor: pointer;
+    /* align-self: flex-end; */
+}
+.eachTodos{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    margin: 0 0 10px;
+    font-size: 20px;
+    text-align: start;
 }
