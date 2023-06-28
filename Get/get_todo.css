@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(../Images/Todo-image-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    place-items: center;
+    margin-top: 6rem;
+}
+
+.btn-add{
+    background-color: rgba(218, 47, 47, 0.712);
+    padding: 1rem 1rem;
+    border-radius: 15px;
+    border: 1px solid brown;
+}
+.btn-add:hover{
+    cursor: pointer;
+    background-color: brown;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+div{
+    display: flex;
+    font-size: 1.4rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 1rem 0;
+    width: 50%;
+}
+
+.done{
+    text-decoration: line-through;
+}
