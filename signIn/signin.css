@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("images/SignIn\ &\ SignUp.jpeg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+}
+form{
+    background: burlywood;
+    width: 90%;
+    max-width: 400px;
+    margin: 100px auto 20px;
+    padding: 20px;
+    border-radius: 5px;
+
+}
+input{
+    height: 35px;
+    width: 100%;
+    border: 0;
+    margin: 0 auto 15px;
+    border-radius: 8px;
+    padding: 10px;
+}
+label{
+    color:c ;
+    font-size: 23px;
+}
+
+button{
+    height: 40px;
+    width: 80px;
+    padding: 10px;
+    outline: 0;
+    border: none;
+    background: firebrick;
+    color:floralwhite;
+    border-radius: 10px;
+    cursor: pointer;
+    }
+    button:hover{
+        background: darksalmon;
+        color: black;
+    }
