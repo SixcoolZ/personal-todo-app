@@ -6,7 +6,7 @@ formEle.addEventListener("submit", function (event) {
   const form = event.currentTarget;
   const formData = new FormData(form);
   const data = Object.fromEntries(formData.entries());
- console.log(data)
+  
   // SignUp(formEle.method, formEle.action, data)
 if(data.title === "" && data.category === ""){
   alert("enter task")
