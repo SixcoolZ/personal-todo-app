@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="addTodo.css">
 
     <title>Document</title>
 </head>
 <body>
     <form action="https://todo-ts-cs5q.onrender.com/api/todo" method="post">
         <label for="title">Title
-            <input type="text" name="title">
+            <input type="text" name="title" required>
         </label>
         <label for="category">Category
-            <input type="text" name="category">
+            <input type="text" name="category" required>
         </label>
         <button type="submit">Add Todo</button>
     </form>
