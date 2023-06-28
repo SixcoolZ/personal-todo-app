@@ -5,20 +5,29 @@
 }
 
 body{
-    background-image: url("images/SignIn\ &\ SignUp.jpeg");
+    background-image: url("../signIn/images/SignIn\ &\ SignUp.jpeg");
     background-repeat: no-repeat;
     background-size:cover;
     background-attachment: fixed;
+    display: grid;
+    place-content: center;
 }
+h1{
+    color: aquamarine;
+    margin-top: 4rem;
+    padding: 0 1.5rem;
+}
+
 form{
     background: burlywood;
     width: 90%;
     max-width: 400px;
-    margin: 100px auto 20px;
+    margin-top: 2rem;
     padding: 20px;
     border-radius: 5px;
 
 }
+
 input{
     height: 35px;
     width: 100%;
@@ -27,8 +36,9 @@ input{
     border-radius: 8px;
     padding: 10px;
 }
+
 label{
-    font-size: 23px;
+    font-size: 20px;
 }
 
 button{
@@ -41,8 +51,8 @@ button{
     color:floralwhite;
     border-radius: 10px;
     cursor: pointer;
-    }
-    button:hover{
-        background: darksalmon;
-        color: black;
-    }
+}
+button:hover{
+    background: darksalmon;
+    color: black;
+}
