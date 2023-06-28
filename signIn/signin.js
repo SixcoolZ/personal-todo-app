@@ -22,6 +22,6 @@ function SignIn(data){
     }).then((res) => res.json())
     .then(data => {
         localStorage.setItem("token", data.token)
-        window.location.href = "/Reference/getTodos.html";
+        window.location.href = "../Get/getTodos.html";
     })
 }

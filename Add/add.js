@@ -6,9 +6,13 @@ formEle.addEventListener("submit", function (event) {
   const form = event.currentTarget;
   const formData = new FormData(form);
   const data = Object.fromEntries(formData.entries());
-
+  
   // SignUp(formEle.method, formEle.action, data)
-  AddTodo(data);
+if(data.title === "" && data.category === ""){
+  alert("enter task")
+}
+    AddTodo(data);
+  
 
   formEle.reset();
 });
