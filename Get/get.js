@@ -1,5 +1,6 @@
 const body = document.body;
 const token = localStorage.token;
+const div_get = document.querySelector(".get-todo-container");
 
 fetch("https://todo-ts-cs5q.onrender.com/api/todo", {
   method: "GET",
@@ -13,7 +14,9 @@ fetch("https://todo-ts-cs5q.onrender.com/api/todo", {
       const delete_button = document.createElement("button");
       checkBox.setAttribute("type", "checkbox");
 
+      div.setAttribute("class","eachTodos")
       const p = document.createElement("p");
+      p.setAttribute("class", "p_todos");
       p.textContent = item.title;
 
       delete_button.textContent = "DELETE";
@@ -30,8 +33,9 @@ fetch("https://todo-ts-cs5q.onrender.com/api/todo", {
       }
 
       div.append(checkBox, p, delete_button);
+      div_get.appendChild(div);
 
-      body.append(div);
+      body.append(div_get);
     });
     checkInput();
     checkDelete();
