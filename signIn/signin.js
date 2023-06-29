@@ -22,6 +22,7 @@ function SignIn(data){
     }).then((res) => res.json())
     .then(data => {
         localStorage.setItem("token", data.token)
+        localStorage.setItem("email", data.user.email)
         window.location.href = "../Get/getTodos.html";
     })
 }

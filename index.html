@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./Images/to-do-list.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="./Images/to-do-list.png"
+      type="image/x-icon"
+    />
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     <title>Todo || Futurelabs || Interns</title>
   </head>
@@ -39,19 +43,35 @@
         border-color: orange;
       }
     }
+
+    .nav-btns{
+      width: 10rem;
+      display: flex;
+      justify-content: space-around;
+    }
   </style>
   <body class="min-h-screen">
     <nav class="flex justify-between p-2 bg-yellow-300 text-white">
       <section>
         <p class="text-2xl">Todo</p>
       </section>
-      <section>
-        <button type="button" class="text-white-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-gray-600 dark:text-white-400 dark:hover:text-white dark:hover:bg-gray-00 dark:focus:ring-gray-800"><a href="./signIn/signin.html" target="_blank">Login</a></button>
-        <button type="button" class="text-white-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-gray-600 dark:text-white-400 dark:hover:text-white dark:hover:bg-gray-00 dark:focus:ring-gray-800"><a href="./signup/signup.html" target="_blank">SignUp</a></button>
+      <section class="nav-btns">
+        <button
+          type="button"
+          class="text-white-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-gray-600 dark:text-white-400 dark:hover:text-white dark:hover:bg-gray-00 dark:focus:ring-gray-800"
+        >
+          <a href="./signIn/signin.html" target="_blank">Login</a>
+        </button>
+        <button
+          type="button"
+          class="text-white-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-gray-600 dark:text-white-400 dark:hover:text-white dark:hover:bg-gray-00 dark:focus:ring-gray-800"
+        >
+          <a href="./signup/signup.html" target="_blank">SignUp</a>
+        </button>
       </section>
     </nav>
     <main class="h-20 flex flex-col justify-center items-center">
-      <header class="text-3xl flex typewriter"><h1>WELCOME</h1></header>
+      <header class="text-3xl flex typewriter"><h1 id="message">WELCOME</h1></header>
     </main>
     <section class="sticky top-[70vh] text-right m-6 flex-col">
       <h5 class="font-bold">Contributors:</h5>
@@ -126,6 +146,35 @@
     <script>
       const footer = document.getElementsByTagName("footer")[0];
       const year = new Date().getFullYear();
+      const nav_btns = document.getElementsByClassName("nav-btns")[0];
+      const header = document.getElementById("message")
+      const token = localStorage.token;
+
+      if (token != "null") {
+        const todos_btn = document.createElement("button");
+        const logout_btn = document.createElement("button");
+        const a = document.createElement("a");
+
+        todos_btn.setAttribute("type", "button");
+        a.setAttribute("href", "/Get/getTodos.html");
+        a.textContent = "My todos";
+        logout_btn.textContent = "Logout";
+
+        logout_btn.addEventListener('click', function(){
+          localStorage.token = null;
+          location.href = "/signIn/signin.html"
+        })
+
+        let user_name = localStorage.email;
+        user_name = user_name.split('@');
+        user_name = user_name[0].toUpperCase();
+        
+        header.textContent = `WELCOME ${user_name}`
+
+        todos_btn.appendChild(a);
+        nav_btns.replaceChildren();
+        nav_btns.append(todos_btn, logout_btn);
+      }
 
       footer.innerHTML = `<p>Futurelabs&copy${year}</p>`;
     </script>
