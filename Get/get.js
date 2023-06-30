@@ -22,6 +22,15 @@ fetch("https://todo-ts-cs5q.onrender.com/api/todo", {
       p.setAttribute("class", "p_todos");
       p.textContent = item.title;
 
+      // // trial
+      // p.addEventListener("click", function(e){{
+      //   const edit = document.createElement("input");
+      //   edit.setAttribute("type", "text");
+      //   edit.textContent = p.textContent
+      //   p.appendChild(edit)
+      //   console.log(edit)
+      // }})
+
       delete_button.textContent = "DELETE";
       delete_button.setAttribute('class', "del_btn");
       delete_button.setAttribute("id", item._id);
