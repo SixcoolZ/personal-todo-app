@@ -28,13 +28,6 @@ a{
     color: white;
 }
 
-/* div{
-    display: flex;
-    font-size: 1.4rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 1rem 0;
-   
-} */
 
 .done{
     text-decoration: line-through;
@@ -70,4 +63,19 @@ a{
     margin: 0 0 10px;
     font-size: 20px;
     text-align: start;
+}
+
+
+@media screen and (min-width: 345px) {
+    body{
+        background-image: url(../Images/Todo-image-2.jpg);
+        background-repeat: no-repeat;
+        background-size: 70rem;
+    }
+
+
+    .get-todo-container{
+        background:rgba(222, 184, 135, 0.849);
+        width: 100%;
+    }
 }
