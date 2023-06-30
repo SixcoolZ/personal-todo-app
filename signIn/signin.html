@@ -9,6 +9,7 @@
     <title>SignIn</title>
 </head>
 <body>
+    <button type="button" id="goHome"><a href="/index.html">HOME</a></button>
     <form action="https://todo-ts-cs5q.onrender.com/api/auth/register" method="post">
         <label for="email">Email:
             <input type="email" name="email" placeholder="Enter email..." required>
@@ -17,6 +18,8 @@
             <input type="password" name="password" placeholder="Enter password here..." required>
         </label>
         <button type="submit">Sign In</button>
+        <p id="signupOption">Need an account? <a href="../signup/signup.html">Sign up</a></p>
+
     </form>
     <script src="./signin.js"></script>
 </body>
