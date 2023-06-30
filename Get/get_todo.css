@@ -66,7 +66,7 @@ a{
 }
 
 
-@media screen and (min-width: 345px) {
+@media screen and (max-width: 345px) {
     body{
         background-image: url(../Images/Todo-image-2.jpg);
         background-repeat: no-repeat;
@@ -76,6 +76,6 @@ a{
 
     .get-todo-container{
         background:rgba(222, 184, 135, 0.849);
-        width: 100%;
+        width: 100%;  
     }
 }
