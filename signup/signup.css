@@ -5,24 +5,44 @@
 }
 
 body{
-    background-image: url("../signIn/images/SignIn\ &\ SignUp.jpeg");
+    background-image: url("../Images/Signup\ background.jpeg");
     background-repeat: no-repeat;
     background-size:cover;
     background-attachment: fixed;
-    display: grid;
-    place-content: center;
+    /* display: grid;
+    place-content: center; */
+}
+
+#goHome{
+    height: 40px;
+    width: 80px;
+    padding: 10px;
+    outline: 0;
+    border: none;
+    background: firebrick;
+   
+    border-radius: 10px;
+    cursor: pointer;
+    margin:20px 20px 0;
+}
+#goHome a{
+    text-decoration: none;
+    color:floralwhite; 
+    font-size: 15px;
+    font-weight: 700;
 }
 h1{
     color: aquamarine;
-    margin-top: 4rem;
+    margin: 5rem auto 2rem;
     padding: 0 1.5rem;
+    text-align: center;
 }
 
 form{
     background: burlywood;
     width: 90%;
     max-width: 400px;
-    margin-top: 2rem;
+    margin: 0 auto 20px;
     padding: 20px;
     border-radius: 5px;
 
@@ -55,4 +75,18 @@ button{
 button:hover{
     background: darksalmon;
     color: black;
+}
+#signinOption{
+    margin: -30px 0 0;
+    text-align: end;
+    
+}
+#signinOption a{
+    text-decoration: none;
+    color: firebrick;
+    font-weight: 700;
+}
+
+#signinOption a:hover{
+    color: chocolate;
 }
